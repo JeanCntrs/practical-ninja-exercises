@@ -9,7 +9,11 @@ func main() {
 	yearOfBirth := 1993
 	currentYear := time.Now().Year()
 
-	for yearOfBirth <= currentYear {
+	for {
+		if yearOfBirth > currentYear {
+			break
+		}
+
 		fmt.Println(yearOfBirth)
 		yearOfBirth++
 	}
